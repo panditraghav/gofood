@@ -79,7 +79,10 @@ function MealLoadingSkeleton() {
     <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2">
       {new Array(6).fill(0).map((_, index) => {
         return (
-          <div className="h-[60px] w-full animate-pulse rounded-md bg-gray-100" />
+          <div
+            className="h-[60px] w-full animate-pulse rounded-md bg-gray-100"
+            key={index}
+          />
         );
       })}
     </div>
