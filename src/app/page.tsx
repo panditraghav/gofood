@@ -1,3 +1,4 @@
+import CategoryList from "@/components/category-list";
 import Header from "@/components/header";
 import { ArrowRightIcon, PlusIcon } from "lucide-react";
 import Image from "next/image";
@@ -11,13 +12,20 @@ export default function Home() {
         <div className="col-span-4 bg-my-bg-green"></div>
       </div>
       <HeroSection />
+      <section className="container mx-auto my-12 space-y-8">
+        <div className="space-y-2 text-center font-semibold text-primary-foreground-800">
+          <h4>Shop by Category</h4>
+          <h3 className="font-serif text-4xl">Top Category Of Organic Food</h3>
+        </div>
+        <CategoryList />
+      </section>
     </main>
   );
 }
 
 function HeroSection() {
   return (
-    <section className="container mx-auto grid h-[480px] grid-cols-10">
+    <section className="container mx-auto grid h-[500px] grid-cols-10">
       <div className="col-span-6 mr-28 flex flex-col justify-center space-y-3">
         <h3 className="text-lg font-bold">Discount up to 20%</h3>
         <h1 className="font-serif text-5xl font-medium">
