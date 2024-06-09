@@ -9,13 +9,13 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="container z-50 mx-auto flex w-full items-center justify-between bg-transparent py-8">
+    <div className="container z-50 mx-auto flex items-center justify-between bg-my-bg-cream px-3 py-8 md:w-full md:bg-transparent md:px-0">
       <h1 className="medium font-sans text-xl font-medium">
         <Link href="/">
           GO <span className="font-bold">FOOD</span>
         </Link>
       </h1>
-      <nav>
+      <nav className="hidden md:block">
         <ul className="flex space-x-8 font-medium">
           <li>
             <Link href="/">Home</Link>
@@ -28,7 +28,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <div className="flex justify-between space-x-8">
+      <div className="hidden justify-between space-x-8 md:flex">
         <button className="flex items-center space-x-1 font-medium text-white">
           <span>Connect with us</span> <ArrowRightIcon size={16} />
         </button>

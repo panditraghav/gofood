@@ -44,7 +44,7 @@ export default function CategoryList() {
   }, [selectedCategory]);
   return (
     <div className="space-y-8 text-primary-foreground-800">
-      <div className="flex w-full flex-wrap justify-between gap-6">
+      <div className="flex w-full flex-wrap justify-between gap-4 md:gap-6">
         {categories.map((category, index) => {
           return (
             <button
@@ -95,7 +95,7 @@ function MealItem({ meal }: { meal: Meal }) {
       <img
         width={64}
         height={64}
-        className="h-auto w-16 rounded-full"
+        className="rounded-full"
         src={meal.strMealThumb + "/preview"}
         alt={meal.strMeal}
       />
@@ -111,7 +111,7 @@ function MealItem({ meal }: { meal: Meal }) {
         <div className="w-full border-t-2 border-dashed" />
         <div className="flex w-full justify-between">
           <div className="text-xs font-medium text-primary-foreground-100">
-            Lorem ipsum dolor sit amet officia.
+            Lorem ipsum dolor sit.
           </div>
           <Link href="/" className="flex text-secondary-foreground-800">
             <span className="text-xs font-medium uppercase">Shop Now</span>
