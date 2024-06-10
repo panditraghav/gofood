@@ -15,7 +15,7 @@ import { useState } from "react";
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className="container z-50 mx-auto flex items-center justify-between bg-my-bg-cream px-3 py-8 md:w-full md:bg-transparent md:px-0">
+    <div className="container relative z-50 mx-auto flex items-center justify-between overflow-x-clip bg-my-bg-cream px-3 py-8 md:w-full md:bg-transparent md:px-0">
       <h1 className="medium font-sans text-xl font-medium">
         <Link href="/">
           GO <span className="font-bold">FOOD</span>
@@ -95,7 +95,7 @@ function MobileNavbar({
   return (
     <nav
       data-open={open}
-      className="absolute right-0 top-0 z-50 h-screen w-[60%] translate-x-full bg-my-bg-cream px-8 py-8 transition-all duration-300 data-[open='true']:translate-x-0 data-[open='true']:slide-in-from-left md:hidden"
+      className="absolute right-0 top-0 z-50 h-screen w-[60%] translate-x-full bg-my-bg-cream px-8 py-8 transition duration-300 data-[open='true']:translate-x-0 data-[open='true']:slide-in-from-left md:hidden"
     >
       <div className="flex justify-end">
         <button onClick={onClose}>
